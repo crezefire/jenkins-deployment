@@ -1,16 +1,15 @@
 #!/bin/bash
 
-sudo apt -y update
+sudo apt -y update # Should have been run before
 sudo apt -y install docker.io python3
 
-cd ~/
 mkdir jenkins-master-data
 
 sudo systemctl start docker
 
 sudo docker build -t vimmy/jenkins-master .
 
-sudo docker run -p 80:8080 -p 50000:50000 -v ~/jenkins-master-data:/var/jenkins_home vimmy/jenkins-master &
+sudo docker run -p 80:8080 -p 50000:50000 -p 13370:13370 -v ~/jenkins-master-data:/var/jenkins_home vimmy/jenkins-master &
 disown %1
 
 # HACK
