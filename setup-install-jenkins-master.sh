@@ -3,8 +3,8 @@
 sudo apt -y update # Should have been run before
 sudo apt -y install docker.io python3
 
-mkdir jenkins-master-data
-sudo chown 1000 jenkins-master-data
+mkdir ~/jenkins-master-data
+sudo chown 1000 ~/jenkins-master-data
 
 sudo systemctl start docker
 
