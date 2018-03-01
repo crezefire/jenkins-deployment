@@ -5,5 +5,5 @@ Setup Jenkins Environment
 ## Setup Master
 
 ```bash
-wget setup-git-repo.sh && chmod +x setup-git-repo.sh && ./setup-git-repo.sh
+wget https://raw.githubusercontent.com/crezefire/jenkins-deployment/master/setup-git-repo.sh && chmod +x setup-git-repo.sh && ./setup-git-repo.sh
 ```
