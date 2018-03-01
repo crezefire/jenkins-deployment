@@ -19,7 +19,7 @@ export JENKINS_DOCKER_ID=$(sudo docker ps -l --format="{{.ID}}")
 
 echo $JENKINS_DOCKER_ID >> ~/.bashrc
 
-sudo docker exec $JENKINS_DOCKER_ID cat /var/jenkins_home/secrets/initialAdminPassword > ~/jenkins_initial_admin_pass.txt
+sudo docker exec $JENKINS_DOCKER_ID cat /var/jenkins_home/secrets/initialAdminPassword > jenkins_initial_admin_pass.txt
 
 python3 -m http.server 8000 &
 
