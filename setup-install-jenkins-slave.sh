@@ -8,10 +8,6 @@ mkdir jenkins
 
 mkdir downloads && cd downloads
 
-export jenkins_master_url=""
-export jenkins_slave_name=""
-export jenkins_secret=""
-
 wget "http://${jenkins_master_url}/jnlpJars/agent.jar"
 
 # Get this from Jenkins

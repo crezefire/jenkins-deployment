@@ -1,1 +1,6 @@
+README.md
+
+setup-git-repo.sh
 setup-install-jenkins-master.sh
+setup-install-jenkins-slave.sh
+
