@@ -10,7 +10,8 @@ sudo systemctl start docker
 
 sudo docker build -t vimmy/jenkins-master .
 
-sudo docker run -p 80:8080 -p 50000:50000 -p 13370:13370 -v ~/jenkins-master-data:/var/jenkins_home vimmy/jenkins-master &
+# Port mapping for Java API: -p 50000:50000
+sudo docker run -p 80:8080 -p 13370:13370 -v ~/jenkins-master-data:/var/jenkins_home vimmy/jenkins-master &
 disown %1
 
 # HACK
